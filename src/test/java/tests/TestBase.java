@@ -26,6 +26,8 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
+        System.out.println("DEBUG: isRemote = " + config.isRemote());
+        System.out.println("DEBUG: remoteUrl = " + config.remoteUrl());
         if (config.isRemote()) {
             Configuration.remote = config.remoteUrl();
         }
